@@ -11,7 +11,7 @@ function App() {
   );
 
   const handleFailure = (result) => {
-    alert(result);
+    console.log(result);
   };
 
   const handleLogin = async (googleData) => {
