@@ -40,6 +40,7 @@ function App() {
       <header className="App-header">
         <h1>React Google Login App</h1>
         <div>
+          <button onClick={handleLogout}>RESET</button>
           {loginData ? (
             <div>
               <h3>You logged in as {loginData.email}</h3>
