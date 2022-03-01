@@ -1,5 +1,6 @@
 import './App.css';
 import GoogleLogin from 'react-google-login';
+import GoogleLogout from 'react-google-login';
 import { useState } from 'react';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
     setLoginData(data);
     localStorage.setItem('loginData', JSON.stringify(data));
   };
+
   const handleLogout = () => {
     localStorage.removeItem('loginData');
     setLoginData(null);
@@ -41,7 +43,11 @@ function App() {
           {loginData ? (
             <div>
               <h3>You logged in as {loginData.email}</h3>
-              <button onClick={handleLogout}>Logout</button>
+              <GoogleLogout
+                buttonText="Logout"
+                onLogoutSuccess={handleLogout}
+              >
+              </GoogleLogout>
             </div>
           ) : (
             <GoogleLogin
