@@ -57,6 +57,7 @@ function App() {
               onSuccess={handleLogin}
               onFailure={handleFailure}
               cookiePolicy={'single_host_origin'}
+              scope="profile"
             ></GoogleLogin>
           )}
         </div>
