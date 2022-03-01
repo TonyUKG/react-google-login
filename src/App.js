@@ -58,6 +58,7 @@ function App() {
               onFailure={handleFailure}
               cookiePolicy={'single_host_origin'}
               scope="profile"
+              cross-origin-opener-policy="same-origin-allow-popups"
             ></GoogleLogin>
           )}
         </div>
